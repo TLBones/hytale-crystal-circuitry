@@ -1,132 +1,19 @@
-# Hytale Plugin Template
+# Crystal Circuitry
 
-A minimal, ready-to-use template for creating Hytale plugins with modern build tools and automated testing.
-
-> **✨ Builds immediately without any changes!** Clone and run `./gradlew shadowJar` to get a working plugin JAR.
+A mod that aims to add functionality and creative in-game interactions to Hytale.
 
 ## Features
 
-✅ **Modern Build System** - Gradle with Kotlin DSL  
-✅ **Automated Testing** - Custom Gradle plugin for one-command server testing  
-✅ **Java 25** - Latest Java features  
-✅ **ShadowJar** - Automatic dependency bundling  
-✅ **CI/CD Ready** - GitHub Actions workflow included  
-✅ **Minimal Structure** - Only essential files, write your own code
+✅ **Crystals!** - Your crystals will have a purpose now! (No shame on Early-Access, I just found I had way too many to justify not doing anything with them)
 
----
-
-## Quick Start
-
-### Prerequisites
-
-- **Java 25 JDK** - [Download here](https://www.oracle.com/java/technologies/downloads/)
-- **IntelliJ IDEA** - [Download here](https://www.jetbrains.com/idea/download/) (Community Edition is fine)
-- **Git** - [Download here](https://git-scm.com/)
-
-### 1. Clone or Download
-
-```bash
-git clone https://github.com/yourusername/hytale-plugin-template.git
-cd hytale-plugin-template
-```
-
-**The template builds immediately without any changes!**  
-You can customize it later when you're ready to develop your plugin.
-
-### 2. Build Immediately (No Changes Needed!)
-
-The template works out-of-the-box:
-
-```bash
-# Windows
-gradlew.bat shadowJar
-
-# Linux/Mac
-./gradlew shadowJar
-```
-
-Your plugin JAR will be in: `build/libs/TemplatePlugin-1.0.0.jar`
-
-### 3. Customize Your Plugin (Optional)
-
-When ready to customize, edit these files:
-
-**`settings.gradle.kts`:**
-
-```kotlin
-rootProject.name = "your-plugin-name"
-```
-
-**`gradle.properties`:**
-
-```properties
-pluginGroup=com.yourname
-pluginVersion=1.0.0
-pluginDescription=Your plugin description
-```
-
-**`src/main/resources/manifest.json`:**
-
-```json
-{
-  "Group": "YourName",
-  "Name": "YourPluginName",
-  "Main": "com.yourname.yourplugin.YourPlugin"
-}
-```
-
-**Rename the main plugin class:**
-
-- Rename `src/main/java/com/example/templateplugin/TemplatePlugin.java`
-- Update package name to match your `pluginGroup`
-
-### 4. Build Your Plugin
-
-```bash
-# Windows
-gradlew.bat shadowJar
-
-# Linux/Mac
-./gradlew shadowJar
-```
-
-Your plugin JAR will be in: `build/libs/YourPluginName-1.0.0.jar`
-
-### 5. Implement Your Plugin
-
-Write your plugin code in `src/main/java/`:
-
-- Commands
-- Event listeners
-- Services
-- Storage
-- Utilities
-
-See our [documentation](../Documentation/) for examples and patterns.
-
-### 6. Test Your Plugin (Automated!)
-
-```bash
-# Windows
-gradlew.bat runServer
-
-# Linux/Mac
-./gradlew runServer
-```
-
-This will:
-
-1. Download the Hytale server (cached for future runs)
-2. Build your plugin
-3. Copy it to the server's mods folder
-4. Start the server with interactive console
+✅ **Semi-Automation!** - Certain aspects of Hytale are semi-automatable with Crystal Magic! Each crystal has its own function, have fun exploring your creative options!
 
 ---
 
 ## Project Structure
-
+# Pulled from Template information - Kept for Development steps/fallback & Credits - All Template Credit to GitHub user realBritakee for the amazing template design.
 ```
-TemplatePlugin/
+CrystalCircuitry/
 ├── .github/workflows/
 │   └── build.yml                    # CI/CD workflow
 ├── buildSrc/
@@ -134,9 +21,14 @@ TemplatePlugin/
 │   └── src/main/kotlin/
 │       └── RunHytalePlugin.kt       # Automated server testing
 ├── src/main/
-│   ├── java/com/example/templateplugin/
-│   │   └── TemplatePlugin.java      # Minimal main class (example)
+│   ├── java/
+│   │   ├── raven/crystalcircuitry/
+│   │   │   └── CrystalCircuitry.java      # Minimal main class (example)
+│   │   └── org/plugin/
+│   │       ├──ExampleCommand.java      # Example plugin cases for fallback
+│   │       └──ExamplePlugin.java      # Example plugin cases for fallback
 │   └── resources/
+│       ├── Server/Item/Recipes/Example_Recipe.json
 │       └── manifest.json            # Plugin metadata
 ├── .gitignore                       # Git ignore rules
 ├── build.gradle.kts                 # Build configuration
@@ -248,7 +140,7 @@ gradlew.bat runServer
 - ✅ Server files in `run/` directory (gitignored)
 
 ### Implementing Your Plugin
-
+# Pulled from Template information - Kept for Development steps/fallback & Credits
 **Recommended folder structure:**
 
 ```
@@ -267,7 +159,7 @@ src/main/java/com/yourname/yourplugin/
 - [Getting Started with Plugins](https://britakee-studios.gitbook.io/hytale-modding-documentation/plugins-java-development/07-getting-started-with-plugins)
 - [Advanced Plugin Patterns](https://britakee-studios.gitbook.io/hytale-modding-documentation/plugins-java-development/12-advanced-plugin-patterns)
 - [Common Plugin Features](https://britakee-studios.gitbook.io/hytale-modding-documentation/plugins-java-development/14-common-plugin-features)
-
+# Pulled from Template information - Kept for Development steps/fallback & Credits
 ---
 
 ## CI/CD

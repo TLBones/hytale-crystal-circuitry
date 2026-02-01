@@ -1,14 +1,14 @@
 {
-    "Group": "Example",
-    "Name": "ExamplePlugin",
-    "Version": "0.0.2",
-    "Description": "An example plugin for HyTale!",
+    "Group": "raven",
+    "Name": "CrystalCircuitry",
+    "Version": "0.0.1",
+    "Description": "Crystal Circuitry to add more flavor to your base and adventures!",
     "Authors": [
         {
-            "Name": "It's you!"
+            "Name": "MadameRaven"
         }
     ],
-    "Website": "example.org",
+    "Website": "",
     "ServerVersion": "*",
     "Dependencies": {
         
@@ -17,6 +17,6 @@
         
     },
     "DisabledByDefault": false,
-    "Main": "org.example.plugin.ExamplePlugin",
+    "Main": "raven.crystalcircuitry.CrystalCircuitry",
     "IncludesAssetPack": true
 }
