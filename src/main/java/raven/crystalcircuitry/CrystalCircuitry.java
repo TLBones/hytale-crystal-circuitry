@@ -1,4 +1,4 @@
-package com.example.templateplugin;
+package raven.crystalcircuitry;
 
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
@@ -14,14 +14,14 @@ import java.util.logging.Level;
  * @author YourName
  * @version 1.0.0
  */
-public class TemplatePlugin extends JavaPlugin {
+public class CrystalCircuitry extends JavaPlugin {
 
-    private static TemplatePlugin instance;
+    private static CrystalCircuitry instance;
 
     /**
      * Constructor - Called when plugin is loaded.
      */
-    public TemplatePlugin(@Nonnull JavaPluginInit init) {
+    public CrystalCircuitry(@Nonnull JavaPluginInit init) {
         super(init);
         instance = this;
         getLogger().at(Level.INFO).log("[TemplatePlugin] Plugin loaded!");
@@ -30,7 +30,7 @@ public class TemplatePlugin extends JavaPlugin {
     /**
      * Get plugin instance.
      */
-    public static TemplatePlugin getInstance() {
+    public static CrystalCircuitry getInstance() {
         return instance;
     }
 
