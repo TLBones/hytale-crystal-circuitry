@@ -2,42 +2,95 @@
   "TranslationProperties": {
     "Name": "server.items.CC_GreenSwitch.name"
   },
-  "MaxStack": 100,
-  "Model": "Blocks/CC_GreenSwitch.blockymodel",
-  "Texture": "BlockTextures/CC_GreenSwitchOff.png",
-  "Quality": "Rare",
-  "SoundEventId": "SFX_Crystal_Build",
-  "Set": "CrystalCircuitry",
+  "Icon": "Icons/ItemsGenerated/CC_GreenSwitch.png",
+  "PlayerAnimationsId": "Block",
   "Categories": [
     "CC_Category.CC_Blocks"
   ],
-  "Scale": 1,
+  "MaxStack": 100,
+  "Quality": "Rare",
+  "SoundEventId": "SFX_Crystal_Walk",
+  "Model": "Blocks/CC_GreenSwitch.blockymodel",
+  "Texture": "BlockTextures/CC_GreenSwitchOff.png",
   "BlockType": {
     "Group": "CC_Blocks",
     "DrawType": "Model",
-    "Textures": [
+    "CustomModelTexture": [
       {
-        "All": "BlockTextures/CC_GreenSwitchOff.png",
-        "Weight": 1
+        "Texture": "BlockTextures/CC_GreenSwitchOff.png"
       },
       {
-        "All": "BlockTextures/CC_GreenSwitchOn.png"
+        "Texture": "BlockTextures/CC_GreenSwitchOn.png"
       }
     ],
     "CustomModel": "Blocks/CC_GreenSwitch.blockymodel",
-    "Opacity": "Cutout",
     "Material": "Solid",
-    "CustomModelScale": 1,
-    "HitboxType": "Block_Half",
-    "InteractionHitboxType": "Block_Half",
     "BlockSoundSetId": "Crystal",
-    "AmbientSoundEventId": "SFX_Crystal_Build",
-    "InteractionSoundEventId": "SFX_Crystal_Hit",
+    "InteractionSoundEventId": "SFX_Crystal_Walk",
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "ChangeState",
+            "Changes": {
+              "default": "Turned_On",
+              "Turned_On": "Turned_Off",
+              "Turned_Off": "Turned_On"
+            }
+          }
+        ]
+      }
+    },
+    "RandomRotation": "None",
+    "VariantRotation": "NESW",
     "PlacementSettings": {
       "AllowRotationKey": true,
-      "RotationMode": "StairFacingPlayer",
-      "BlockPreviewVisibility": "AlwaysVisible"
-    }
+      "RotationMode": "Default",
+      "BlockPreviewVisibility": "Default"
+    },
+    "Opacity": "Solid",
+    "State": {
+      "Definitions": {
+        "Turned_On": {
+          "DrawType": "Model",
+          "CustomModelTexture": [
+            {
+              "Texture": "BlockTextures/CC_GreenSwitchOn.png"
+            }
+          ],
+          "CustomModelAnimation": "Blocks/Animations/CC_GreenSwitch/turn_on.blockyanim",
+          "Material": "Solid",
+          "Opacity": "Solid",
+          "CustomModel": "Blocks/CC_GreenSwitchOn.blockymodel"
+        },
+        "Turned_Off": {
+          "DrawType": "Model",
+          "CustomModelTexture": [
+            {
+              "Texture": "BlockTextures/CC_GreenSwitchOff.png"
+            }
+          ],
+          "CustomModelAnimation": "Blocks/Animations/CC_GreenSwitch/turn_off.blockyanim",
+          "Material": "Solid",
+          "Opacity": "Solid",
+          "CustomModel": "Blocks/CC_GreenSwitchOff.blockymodel"
+        }
+      }
+    },
+    "CustomModelAnimation": "Blocks/Animations/CC_GreenSwitch/default.blockyanim"
   },
-  "Icon": "Icons/ItemsGenerated/CC_GreenSwitch.png"
+  "Scale": 1,
+  "UsePlayerAnimations": true,
+  "IconProperties": {
+    "Scale": 0.6,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      1,
+      -10
+    ]
+  }
 }
